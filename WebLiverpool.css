@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1000px;
+    border: 1px solid black;
+    margin: auto;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    color: white;
+    background-color: #dc0714;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+header {
+    display: inline;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.navigasi {
+    display: grid;
+    grid-template-columns: repeat(6, 120px);
+    justify-self: center;
+    /* display: flex; */
+    
+}
+
+nav {
+    background-color: #c00310;
+    padding: 30px;
+    position: sticky;
+    top: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    /* margin-right: 40px; */
+}
+
+nav a:hover {
+   font-weight: bold;
+}
+
+.content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pemain,
+.sejarah,
+.pelatih,
+.stadium {
+    width: 80%;
+}
+
+article p {
+    text-indent: 10px;
+}
+
+/* .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.position {
+    display: flex;
+    flex-basis: 25%;
+    flex-wrap: wrap;
+} */
+
+.box-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    /* grid-template-areas: 
+    'diaz jota salah'
+    'hendo thago fabinho'
+    'robo arnold'
+    'dijk matip'
+    'alissob'; */
+}
+
+
+.box {
+    border: 1px solid black;
+    margin: 10px;
+    display: grid;
+    /* display: flex; */
+    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 30px ;
+    padding: 20px;
+    margin-top: 20px;
+    /* flex-direction: column; */
+    font-size: 15px;
+    background-color: #c00310;
+}
+
+/* .box.diaz {
+    grid-area: diaz;
+}
+
+.box.jota {
+    grid-area: jota;
+}
+
+.box.salah {
+    grid-area: salah;
+}
+
+.box.hendo {
+    grid-area: hendo;
+}*/
+.box.robo {
+    grid-area: 3 / 1 / 4 / 2;
+    /* justify-self: start; */
+}
+.box.arnold {
+    grid-area: 3 / 3 / 4 / 4;
+    /* justify-self: end; */
+    /* grid-area: arnold; */
+}
+
+.box.dijk {
+    grid-area: 4 / 1 / 5 / 2;
+
+}
+
+.box.matip {
+    grid-area: 4 / 3 / 5 / 4;
+
+}
+.box.alisson {
+    grid-area: alisson 5 / 2 / 6 / 3; 
+} 
+
+ .box img {
+    width: 150px;
+    margin: auto;
+} 
+
+.table tr td {
+    border: 0px solid black;
+    border-collapse: separate;
+    padding: 10px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #911712;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    max-width: 1000px;
+    margin: auto;
+    border: 1px solid black;
+}
