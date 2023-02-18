@@ -86,7 +86,7 @@ nav a:hover {
     background-color: #c00310;
 }
 
-.box.robo {
+/* .box.robo {
     grid-area: 3 / 1 / 4 / 2;
 }
 .box.arnold {
@@ -99,12 +99,12 @@ nav a:hover {
 }
 
 .box.matip {
-    grid-area: 4 / 3 / 5 / 4;
+    grid-area: 4 / 3 / 5 / 4; */
 
-}
+/* }
 .box.alisson {
     grid-area: alisson 5 / 2 / 6 / 3; 
-} 
+}  */
 
  .box img {
     width: 150px;
