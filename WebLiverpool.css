@@ -50,7 +50,7 @@ nav a {
 }
 
 nav a:hover {
-   font-weight: bold;
+    color: #aaa;
 }
 
 .content {
