@@ -11,6 +11,7 @@ html, body {
 
 .container {
     max-width: 1000px;
+    /* min-width: 600px; */
     border: 1px solid black;
     margin: auto;
     font-family: 'Quicksand', sans-serif;
@@ -100,10 +101,20 @@ nav a:hover {
 footer {
     padding: 20px;
     background-color: #911712;
-    color: white;
     text-align: center;
     font-weight: bold;
-    max-width: 1000px;
-    margin: auto;
-    border: 1px solid black;
+    border-top: 1px solid black;
+}
+
+/* responsive */
+@media (max-width: 600px ){
+    .container {
+        width: 750px;
+    }
+    .box-container {
+        display: grid;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
 }
