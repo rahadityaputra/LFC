@@ -28,9 +28,6 @@ header {
 }
 
 .navigasi {
-    /* display: grid;
-    grid-template-columns: repeat(6, 120px);
-    justify-self: center;     */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
