@@ -11,7 +11,6 @@ html, body {
 
 .container {
     max-width: 1000px;
-    /* min-width: 600px; */
     border: 1px solid black;
     margin: auto;
     font-family: 'Quicksand', sans-serif;
@@ -107,7 +106,7 @@ footer {
 }
 
 /* responsive */
-@media (max-width: 600px ){
+@media (max-width: 700px ){
     .container {
         width: 750px;
     }
