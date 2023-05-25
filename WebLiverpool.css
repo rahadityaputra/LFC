@@ -1,43 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    padding: 0;
-    margin: 0;
-}
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap'); */
 
 .container {
-    max-width: 1000px;
+    width: 100%;
     border: 1px solid black;
-    margin: auto;
     font-family: 'Quicksand', sans-serif;
-    font-size: 30px;
+    font-size: 10px;
     color: white;
+    box-sizing: border-box;
     background-color: #dc0714;
 }
 
-header {
-    display: inline;
-}
-
 .jumbotron {
-    text-align: center;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.navigasi {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.jumbotron h1 {
+    font-size: 30px;
+    margin-top: 20px;
 }
+
 
 nav {
     background-color: #c00310;
-    padding: 30px;
-    position: sticky;
-    top: 0;
+}
+
+nav .navigasi {
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+nav .navigasi div {
+    margin: 20px;
 }
 
 nav a {
@@ -49,43 +45,54 @@ nav a:hover {
     color: #aaa;
 }
 
-.content {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
+main {
+    padding: 10px;
+    box-sizing: border-box;
 }
+
+.content {
+    margin-top: 20px;
+}
+
+main h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+main p {
+    font-size: 20px;
+    margin: 20px;
+}
+
+
 
 .pemain,
 .sejarah,
 .pelatih,
 .stadium {
-    width: 80%;
+    width: 70%;
 }
 
 .box-container {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr ;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
 
 .box {
     border: 1px solid black;
-    margin: 10px;
-    display: grid;
     box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 30px ;
-    padding: 20px;
-    margin-top: 20px;
-    font-size: 15px;
+    border-radius: 30px;
     background-color: #c00310;
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
-
- .box img {
-    width: 150px;
-    margin: auto;
-} 
 
 .table tr td {
     border: 0px solid black;
@@ -94,22 +101,13 @@ nav a:hover {
 }
 
 footer {
-    padding: 20px;
     background-color: #911712;
     text-align: center;
     font-weight: bold;
     border-top: 1px solid black;
 }
 
-/* responsive */
-@media (max-width: 800px ){
-    .container {
-        width: 750px;
-    }
-    .box-container {
-        display: grid;
-        grid-template-rows: 1fr 1fr ;
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
-    }
+footer p {
+    padding: 30px;
+    font-size: 20px;
 }
