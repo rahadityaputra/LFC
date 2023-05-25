@@ -1,0 +1,43 @@
+@media screen and (min-width : 630px) {
+    .container {
+        max-width: 1000px;
+        margin:  10px auto;
+        font-size: 30px;
+    }
+
+    .jumbotron {
+        text-align: center;
+    }
+
+    nav .navigasi {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav {
+        position: sticky;
+    }
+
+    .content {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pemain,
+    .sejarah,
+    .pelatih,
+    .stadium {
+        width: 80%;
+    }
+
+    .box img {
+        margin: auto;
+    }
+
+    .box-container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+}
