@@ -14,14 +14,19 @@
         flex-direction: row;
     }
 
-    nav {
+    nav  {
         position: sticky;
+        top: 0;
     }
 
     .content {
         padding: 40px;
         display: flex;
         flex-direction: column;
+    }
+
+    main p {
+        font-size: 20px;
     }
 
     .pemain,
