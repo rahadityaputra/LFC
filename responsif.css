@@ -9,9 +9,7 @@
         text-align: center;
     }
 
-    nav .navigasi {
-        flex-direction: row;
-    }
+
 
     .content {
         padding: 40px;
