@@ -21,15 +21,11 @@
     margin-top: 20px;
 }
 
-
-nav {
-    background-color: #c00310;
-}
-
 nav .navigasi {
     display: flex;
     font-size: 20px;
     flex-direction: column;
+    background-color: #c00310;
 }
 
 nav .navigasi div {
@@ -54,10 +50,6 @@ main {
     margin-top: 20px;
 }
 
-/* .main {
-    overflow: auto;
-} */
-
 main h2 {
     font-size: 40px;
     margin-bottom: 20px;
@@ -71,8 +63,6 @@ main p {
     text-align: justify;
     line-height: 30px;
 }
-
-
 
 .pemain,
 .sejarah,
@@ -88,7 +78,6 @@ main p {
     justify-content: space-between;
     padding: 20px;
 }
-
 
 .box {
     border: 1px solid rgb(255, 255, 255);
@@ -109,12 +98,6 @@ main p {
 .box img {
     width: 90px;
 }
-
-/* .table tr td {
-    border: 0px solid black;
-    border-collapse: separate;
-    padding: 10px;
-} */
 
 footer {
     background-color: #911712;
