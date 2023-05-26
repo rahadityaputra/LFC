@@ -37,7 +37,11 @@
 
     .box-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         padding: 20px;
+    }
+
+    .box {
+        margin: 20px;
     }
 }
