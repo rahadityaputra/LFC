@@ -1,6 +1,5 @@
 .container {
     width: 100%;
-    border: 1px solid black;
     font-family: 'Quicksand', sans-serif;
     font-size: 10px;
     color: white;
@@ -9,7 +8,6 @@
 }
 
 .jumbotron {
-    text-align: left;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -68,13 +66,6 @@ main p {
     line-height: 30px;
 }
 
-.pemain,
-.sejarah,
-.pelatih,
-.stadium {
-    width: 70%;
-}
-
 .box-container {
     display: flex;
     flex-direction: row;
@@ -88,7 +79,6 @@ main p {
     box-shadow: 0 35px 15px 0 rgba(0, 0, 0, 0.4);
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
-    font-size: 20px;
     padding: 20px;
     box-sizing: border-box;
     margin-bottom: 20px;

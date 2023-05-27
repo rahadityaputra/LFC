@@ -3,33 +3,19 @@
         max-width: 1000px;
         margin: 10px auto;
         font-size: 30px;
+        border: 1px solid black;
     }
 
     .jumbotron {
         text-align: center;
     }
 
-
-
     .content {
         padding: 40px;
-        display: flex;
-        flex-direction: column;
     }
 
     main p {
         font-size: 20px;
-    }
-
-    .pemain,
-    .sejarah,
-    .pelatih,
-    .stadium {
-        width: 80%;
-    }
-
-    .box img {
-        margin: auto;
     }
 
     .box-container {
