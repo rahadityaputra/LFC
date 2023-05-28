@@ -37,6 +37,7 @@
 .navigasi a {
     text-decoration: none;
     color: white;
+    transition: .7s;
 }
 
 .navigasi a:hover {
@@ -82,6 +83,7 @@ main p {
     padding: 20px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    transition: .4s;
 }
 
 .box:hover {

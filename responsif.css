@@ -1,7 +1,19 @@
 @media screen and (min-width : 630px) {
+    .top_bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 500px;
+        background-color: rgb(135, 72, 72);
+        z-index: -9999;
+    }
+
     .container {
         max-width: 1000px;
-        margin: 10px auto;
+        box-shadow: 3px 0px 5px rgba(0, 0, 0, .4),
+                            -3px 0px 5px rgba(0, 0, 0, .4);
+        margin: 80px auto;
         font-size: 30px;
         border: 1px solid black;
     }
@@ -27,4 +39,17 @@
     .box {
         margin: 20px;
     }
+
+}
+
+
+@media screen and (max-width : 350px){
+   .box {
+    margin: 20px auto;
+   }
+
+   .navigasi ul li {    
+    margin: 10px;
+    display: inline-block;
+}
 }
