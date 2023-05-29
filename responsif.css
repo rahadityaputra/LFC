@@ -1,25 +1,22 @@
 @media screen and (min-width : 630px) {
-    .top_bar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 500px;
-        background-color: rgb(135, 72, 72);
-        z-index: -9999;
-    }
+   
 
     .container {
         max-width: 1000px;
         box-shadow: 3px 0px 5px rgba(0, 0, 0, .4),
                             -3px 0px 5px rgba(0, 0, 0, .4);
-        margin: 80px auto;
         font-size: 30px;
         border: 1px solid black;
     }
 
     .jumbotron {
         text-align: center;
+    }
+
+    .container  .sideMenuBar  {
+        position: sticky;
+        top: 0;
+        z-index: 9999;
     }
 
     .content {
@@ -52,4 +49,82 @@
     margin: 10px;
     display: inline-block;
 }
+}
+
+@media  screen and (max-width : 430px){
+    /* .navigasi {
+        display : none;
+    } */
+
+    .sideMenuBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        transition: 1s;
+        width: 0;
+        height: 0;
+    }
+    
+    .sideMenuBar .navigasi {
+        margin-top: 50px;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        transition: 2s;
+    }
+
+    
+    .sideMenuBar .close {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+        line-height: 50px;
+    }
+    
+    .sideMenuBar .close a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .sideMenuBar:target {
+        background-color: #c00310;
+        bottom: 0;
+        width: 150px;
+        height: auto;
+
+    }
+
+    .sideMenuBar:target .navigasi {
+        width: auto;
+        height: auto;
+    }
+    
+}
+
+
+@media screen and (min-width :1000px){
+    .top_bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 500px;
+            background-color: rgb(135, 72, 72);
+            z-index: -9999;
+    }
+
+    .container {
+        margin: 80px auto;
+    }
+}
+
+@media screen and (min-width : 431px) {
+    .menu , .close{
+        display: none;
+    }
 }

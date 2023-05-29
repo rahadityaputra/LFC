@@ -17,17 +17,21 @@
     margin-top: 20px;
 }
 
+.menu {
+    text-align: right;
+
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
 .navigasi {
     font-size: 20px;
     background-color: #c00310;
-
 }
 
-.container  .navigasi {
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-}
+
 
 .navigasi ul li {    
     margin: 20px;
