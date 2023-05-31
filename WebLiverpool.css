@@ -1,48 +1,40 @@
 .container {
     width: 100%;
-    font-size: 10px;
     color: white;
     box-sizing: border-box;
     background-color: #dc0714;
 }
 
+
+/* css untuk header */
 .jumbotron {
-    padding: 20px;
     box-sizing: border-box;
+    padding: 10px;
+}
+
+.jumbotron img {
+    margin: 10px 0 0 10px ;
 }
 
 .jumbotron h1 {
-    font-size: 30px;
-    margin-top: 20px;
+    font: 35px 'Roboto';
+    margin: 40px 0;
 }
 
-.menu {
-    text-align: right;
-    font-size: 30px;
-    background-color: #c00310;
-    display: block;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-}
+/* css untuk navigasi */
 
-.menu a {
-    color: white;
-    text-decoration: none;
-    margin-right: 40px;
-}
 .navigasi {
-    font-size: 20px;
     background-color: #c00310;
 }
 
-.navigasi ul li {    
+.navigasi ul li {
     margin: 20px;
     display: inline-block;
 }
 
 .navigasi a {
     text-decoration: none;
+    font: 30px 'BebasNeue';
     color: white;
     transition: .7s;
 }
@@ -51,65 +43,64 @@
     color: #aaa;
 }
 
+/* css untuk main */
+
 main {
     padding: 10px;
     box-sizing: border-box;
 }
 
-.content {
-    margin-top: 20px;
+main .card h2 {
+    font: 40px 'Roboto';
 }
 
-main h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-}
-
-main p {
-    font-size: 15px;
-    margin: 20px;
-    font-family: 'Roboto';
+main .card p {
+    font: 15px/30px 'Roboto';
+    margin: 10px;
     text-align: justify;
-    line-height: 30px;
 }
 
-.box-container {
+/* css untuk box-players */
+.container .content .card .box-players {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: space-evenly;
 }
 
 .box {
-    border: 1px solid rgb(255, 255, 255);
-    box-shadow: 0 35px 15px 0 rgba(0, 0, 0, 0.4);
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
+    margin: 10px 0;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    /* untuk ukuran box */
+    width: 35%;
+    /* untuk bentuk box */
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 35px 15px 0 rgba(0, 0, 0, 0.4);
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    /* untuk animasi box */
     transition: .4s;
 }
 
+.box img {
+    width: 100%;
+}
+
+/* animasi box ketika diklik */
 .box:hover {
     box-shadow: 0 40px 15px 0 rgba(0, 0, 0, 0.2);
     transform: scale(1.2);
 }
 
-.box img {
-    width: 90px;
-}
+/* css untuk footer */
 
-footer {
+.container footer {
     background-color: #911712;
     text-align: center;
-    font-weight: bold;
-    border-top: 1px solid black;
+    box-sizing: border-box;
+    padding: 30px;
 }
 
-footer p {
-    padding: 30px;
-    font-size: 20px;
+.container footer p {
+    font: 15px 'Roboto';
 }
