@@ -6,4 +6,9 @@
 @font-face {
     font-family: 'Montserrat';
     src: url('font/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+
+}
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('font/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
 }
