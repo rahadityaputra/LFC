@@ -61,10 +61,15 @@ main .card p {
 }
 
 /* css untuk box-players */
-.container .content .card .box-players {
+/* .container .content .card .box-players {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+} */
+
+.container .content .card .box-players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .box {
