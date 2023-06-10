@@ -1,30 +1,49 @@
 .container {
-    width: 100%;
-    color: white;
+    max-width: 1280px;
+    margin: auto;
+    color: rgb(0, 0, 0);
     box-sizing: border-box;
-    background-color: #dc0714;
+    background-color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template-areas: 'header header header''konten konten konten'' footer footer footer';
 }
 
 
 /* css untuk header */
-.jumbotron {
+
+.header {
     box-sizing: border-box;
     padding: 10px;
+    grid-area: header;
+    color: white;
+    background-color: #c00310;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
-.jumbotron img {
-    margin: 10px 0 0 10px ;
+.header>* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.jumbotron h1 {
-    font: 35px 'Roboto';
-    margin: 40px 0;
+.header img {
+    width: 50px;
+}
+
+.header h1 {
+    font: 15px 'Roboto';
 }
 
 /* css untuk navigasi */
 
+
 .navigasi {
     background-color: #c00310;
+    padding: 50px 20px;
 }
 
 .navigasi ul li {
@@ -48,10 +67,14 @@
 main {
     padding: 10px;
     box-sizing: border-box;
+    grid-area: konten;
 }
 
 main .card h2 {
     font: 40px 'Roboto';
+    background-color: #c00310;
+    padding: 10px;
+    color: white;
 }
 
 main .card p {
@@ -61,27 +84,24 @@ main .card p {
 }
 
 /* css untuk box-players */
-/* .container .content .card .box-players {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-} */
 
 .container .content .card .box-players {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 150px);
+    justify-content: space-evenly;
 }
 
 .box {
     margin: 10px 0;
+    padding: 10px;
     box-sizing: border-box;
     /* untuk ukuran box */
-    width: 35%;
+    /* width: 35%; */
     /* untuk bentuk box */
     border: 1px solid rgb(255, 255, 255);
-    border-radius: 50%;
-    box-shadow: 0 35px 15px 0 rgba(0, 0, 0, 0.4);
-    background-color: rgb(255, 255, 255);
+    /* border-radius: 50%; */
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.4);
+    background-color: rgb(219, 201, 201);
     overflow: hidden;
     /* untuk animasi box */
     transition: .4s;
@@ -100,10 +120,12 @@ main .card p {
 /* css untuk footer */
 
 .container footer {
-    background-color: #911712;
+    background-color: #542928;
     text-align: center;
     box-sizing: border-box;
     padding: 30px;
+    color: rgb(255, 255, 255);
+    grid-area: footer;
 }
 
 .container footer p {
