@@ -1,13 +1,14 @@
+/* css untuk container */
 .container {
-    max-width: 1280px;
-    margin: auto;
+    width: 100%;
     color: rgb(0, 0, 0);
     box-sizing: border-box;
-    background-color: hsl(0, 0%, 100%);
+    background-color: white;
     display: grid;
-    grid-template-areas: 'header header header''konten konten konten'' footer footer footer';
+    grid-template-areas:  'header'
+                                    'konten'
+                                    'footer';
 }
-
 
 /* css untuk header */
 
@@ -19,12 +20,14 @@
     background-color: #c00310;
     display: flex;
     justify-content: space-around;
+
+    /* supaya header tidak bergerak / sticky */
     position: sticky;
     top: 0;
     z-index: 9999;
 }
 
-.header>* {
+.header > * {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,15 +65,61 @@
     color: #aaa;
 }
 
+
+/* css untuk sidebar */
+
+.sideMenuBar {
+    /* posisi sidemenu */
+    position: fixed;
+    /* bentuk sidemenu */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 150px;
+    background-color: #c00310;
+    /* supaya sidemenu tetap di depan */
+    z-index: 9999;
+    /* waktu animasi sidemenu */
+    transition: .5s;
+    /* agar sidemenu tidak tampil ketika menu belum diklik */
+    transform: translateX(-150px);
+}
+
+.sideMenuBar:target {
+    transform: translateX(0px);
+}
+
+.menu a {
+color: white;
+text-decoration: none;
+}
+
+.sideMenuBar .close {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    
+    /* supaya tanda X di pojok kanan atas  */
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+.sideMenuBar .close a {
+    color: white;
+    text-decoration: none;
+}
+
+
 /* css untuk main */
 
-main {
+main .content {
     padding: 10px;
     box-sizing: border-box;
     grid-area: konten;
 }
 
-main .card h2 {
+main .content .card h2 {
     font: 40px 'Roboto';
     background-color: #c00310;
     padding: 10px;
@@ -87,7 +136,7 @@ main .card p {
 
 .container .content .card .box-players {
     display: grid;
-    grid-template-columns: repeat(2, 150px);
+    grid-template-columns: repeat(2, 120px);
     justify-content: space-evenly;
 }
 
@@ -96,7 +145,7 @@ main .card p {
     padding: 10px;
     box-sizing: border-box;
     /* untuk ukuran box */
-    /* width: 35%; */
+
     /* untuk bentuk box */
     border: 1px solid rgb(255, 255, 255);
     /* border-radius: 50%; */
@@ -113,7 +162,7 @@ main .card p {
 
 /* animasi box ketika diklik */
 .box:hover {
-    box-shadow: 0 40px 15px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
     transform: scale(1.2);
 }
 
@@ -126,8 +175,5 @@ main .card p {
     padding: 30px;
     color: rgb(255, 255, 255);
     grid-area: footer;
-}
-
-.container footer p {
     font: 15px 'Roboto';
 }

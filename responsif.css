@@ -2,15 +2,51 @@
 @media screen and (min-width : 630px) {
    
     .container {
-        display: grid;
-        grid-template-areas: 'header' 'nav' 'konten' 'footer';
+        max-width: 1280px;
         font-size: 30px;
+        margin: auto;
+        grid-template-areas:  'header'
+                                        'nav'
+                                        'konten'
+                                        'footer';
     }
 
     .header {
-        text-align: center;
+        position: static;
+        justify-content: space-evenly;
     }
     
+    .header h1{
+        font-size: 40px;
+    }
+    
+    .header .menu {
+        display: none;
+    }
+    
+    .header img {
+        width: 200px;
+    }
+
+
+
+    /* supaya sidebar menu di halaman */
+    .sideMenuBar{
+        transform: translateX(0);
+        position: static;
+        grid-area: nav;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sideMenuBar .close {
+        display: none;
+    }
+    
+    .navigasi ul li {
+        display: inline;
+    }
     main  {
         padding: 40px;
     }
@@ -20,64 +56,22 @@
     }
 
     .box {
-        width: 14%;
         margin: 15px;
     }
-    
+
+    .container .content .card .box-players {
+        grid-template-columns: repeat(4, 120px);
+    }
+     
 }
 
 
 @media  screen and (max-width : 430px){
 
-    .sideMenuBar {
-        /* posisi sidemenu */
-        position: fixed;
-        /* bentuk sidemenu */
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 150px;
-        background-color: #c00310;
-        /* supaya sidemenu tetap di depan */
-        z-index: 9999;
-        /* waktu animasi sidemenu */
-        transition: .5s;
-        /* agar sidemenu tidak tampil ketika menu belum diklik */
-        transform: translateX(-150px);
-    }
-    
-    .sideMenuBar:target {
-        transform: translateX(0px);
-    }
-
- .menu {
-    background-color: #c00310;
-} 
-
-.menu a {
-    color: white;
-    text-decoration: none;
-}
-  
-    .sideMenuBar .close {
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
-        
-        /* supaya tanda X di pojok kanan atas  */
-        position: absolute;
-        top: 0;
-        right: -10px;
-    }
-    
-    .sideMenuBar .close a {
-        color: white;
-        text-decoration: none;
-    }
 
 }
 
-@media screen and (min-width : 431px) {
+/* @media screen and (min-width : 431px) {
 
     .container  .sideMenuBar  {
         position: sticky;
@@ -89,4 +83,4 @@
         display: none;
     }
 
-}
+} */
