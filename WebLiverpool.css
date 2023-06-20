@@ -177,3 +177,7 @@ main .card p {
     grid-area: footer;
     font: 15px 'Roboto';
 }
+
+.container footer a img {
+    width: 50px;
+}
