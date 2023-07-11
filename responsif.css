@@ -64,23 +64,3 @@
     }
      
 }
-
-
-@media  screen and (max-width : 430px){
-
-
-}
-
-/* @media screen and (min-width : 431px) {
-
-    .container  .sideMenuBar  {
-        position: sticky;
-        top: 0;
-        z-index: 9999;
-    }
-
-    .menu , .close{
-        display: none;
-    }
-
-} */
