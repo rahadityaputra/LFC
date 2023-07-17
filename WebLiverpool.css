@@ -1,26 +1,23 @@
 /* css untuk container */
+:root {
+  --color-satu : #c00310;
+}
+
 .container {
     width: 100%;
     color: rgb(0, 0, 0);
     box-sizing: border-box;
     background-color: white;
-    display: grid;
-    grid-template-areas:  'header'
-                                    'konten'
-                                    'footer';
 }
 
 /* css untuk header */
 
 .header {
     box-sizing: border-box;
-    padding: 10px;
     grid-area: header;
     color: white;
-    background-color: #c00310;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
 
     /* supaya header tidak bergerak / sticky */
     position: sticky;
@@ -28,31 +25,47 @@
     z-index: 9999;
 }
 
-.header > * {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .header img {
     width: 50px;
 }
 
 .header h1 {
-    font: 15px 'Roboto';
+    font: 'Roboto';
 }
+
+
+.container .header .menuAndImage {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1;
+  background-color: var(--color-satu);
+  padding: 10px;
+}
+
+
 
 /* css untuk navigasi */
 
-
-.navigasi {
-    background-color: #c00310;
+.container .header .navigasi {
+    background-color: var(--color-satu);
     padding: 50px 20px;
+    transform: translateY(-500px);
+    position: absolute;
+    /* top: 50px; */
+    right: 0;
+    left: 0;
+    /* bottom: 30px; */
+    z-index: -1;
+    /* opacity: 0; */
+    transition:  1s;
+    display: flex;
+    justify-content: center;
 }
 
 .navigasi ul li {
     margin: 20px;
-    display: inline-block;
+    align-content: center;
 }
 
 .navigasi a {
@@ -65,47 +78,6 @@
 .navigasi a:hover {
     color: #aaa;
 }
-
-
-/* css untuk sidebar */
-
-.sideMenuBar {
-    /* posisi sidemenu */
-    position: fixed;
-    /* bentuk sidemenu */
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 150px;
-    background-color: #c00310;
-    /* supaya sidemenu tetap di depan */
-    z-index: 9999;
-    /* waktu animasi sidemenu */
-    transition: .5s;
-    /* agar sidemenu tidak tampil ketika menu belum diklik */
-    transform: translateX(-150px);
-}
-
-.sideMenuBar:target {
-    transform: translateX(0px);
-}
-
-.sideMenuBar .close {
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
-    
-    /* supaya tanda X di pojok kanan atas  */
-    position: absolute;
-    top: 0;
-    right: -10px;
-}
-
-.sideMenuBar .close a {
-    color: white;
-    text-decoration: none;
-}
-
 
 
 /* css untuk menu*/
@@ -124,9 +96,14 @@
   
 }
 
+.aniNav {
+  transform: translateY(30px);
+}
+
 /* css untuk main */
 
-main .content {
+
+.container main .content {
     padding: 10px;
     box-sizing: border-box;
     grid-area: konten;
@@ -134,7 +111,7 @@ main .content {
 
 main .content .card h2 {
     font: 40px 'Roboto';
-    background-color: #c00310;
+    background-color: var(--color-satu);
     padding: 10px;
     color: white;
 }
