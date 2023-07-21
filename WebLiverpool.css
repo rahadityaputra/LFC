@@ -79,6 +79,34 @@
     color: #aaa;
 }
 
+/* css untuk checkbox */
+
+.container .header .menu input {
+  position: absolute;
+  right: 40px;
+  opacity: 0;
+  width: 28px;
+  height: 50px;
+  z-index: 9;
+}
+
+.container .header .menu span {
+  transform-origin: 0 0;
+  transition: .7s;
+}
+
+.container .header .menu input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(1px ,-1px);
+}
+
+.container .header .menu input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg);
+}
+
+.container .header .menu input:checked~span:nth-child(3) {
+  transform: scale(0);
+}
+
 
 /* css untuk menu*/
 .container .header .menu {
@@ -97,7 +125,7 @@
 }
 
 .aniNav {
-  transform: translateY(30px);
+  transform: translateY(30px) !important;
 }
 
 /* css untuk main */
