@@ -152,7 +152,8 @@ body {
 }
 
 .card p {
-	text-align: 10px;
+	font-size: calc(1.5vw + 10px);
+	line-height: 30px;
 	margin: 10px;
 	text-align: justify;
 }

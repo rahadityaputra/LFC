@@ -62,8 +62,8 @@ main  {
     padding: 40px;
 }
 
-main .card p {
-    font-size: 20px;
+.card p {
+	font-size: calc(1.5vw + 5px);
 }
 
 .box {
@@ -81,4 +81,11 @@ main .card p {
 	top: 0;
 }
     
+}
+
+
+@media screen and (min-width : 900px) {
+    .card p {
+        font-size: 15px;
+    }
 }
