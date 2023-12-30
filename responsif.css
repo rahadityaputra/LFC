@@ -1,55 +1,77 @@
 /* css untuk layar minimal 630px ke atas */
 @media screen and (min-width : 630px) {
    
-    .container {
-        max-width: 1280px;
-        font-size: 2em;
-        margin: auto;
-        grid-template-areas:  'header''nav''konten''footer';
-    }
+.container {
+    max-width: 1280px;
+    /* font-size: 2em; */
+    margin:auto;
+    display: grid;
+    grid-template-areas:  'header''nav''konten''footer';
+}
+
+.header {
+    position: relative;
+    padding: 0;
     
-    .container .header .menuAndImage {
-      flex-direction: column;
-    }
+}
+
+.header h1 {
+    font-size: 1.5rem;
+}
     
-    .heade.menuAndImage h1{
-        font-size: 3em;
-    }
-    
-    .header .menuAndImage .menu {
-        display: none;
-    }
-    
-    .header .menuAndImage img {
-        width: 200px;
-    }
-    
-    
-    .container .header .navigasi {
-        transform: translateY(0px);
-    }
+.header .menuAndImage {
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .menuAndImage .menu {
+    display: none;
+}
+
+.menuAndImage img {
+    width: 100px;
+}
+
+.navigasi {
+    height: 50px;
+    transform: translateY(0px);
+    font-size: 1rem;
+    /* position: relative; */
+    position: sticky;
+    top: 0;
+    align-self: auto;
+}
+
+.container .header .navigasi ul {
+    width: 500px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 
-    /* supaya navigasi di halaman */
+/* supaya navigasi di halaman */
+
+.navigasi ul li {
+    display: inline;
+}
+main  {
+    padding: 40px;
+}
+
+main .card p {
+    font-size: 20px;
+}
+
+.box {
+    margin: 15px;
+}
+
+.container .content .card .box-players {
+    grid-template-columns: repeat(4, 120px);
+}
     
-    .navigasi ul li {
-        display: inline;
-    }
-    main  {
-        padding: 40px;
-    }
-
-    main .card p {
-        font-size: 20px;
-    }
-
-    .box {
-        margin: 15px;
-    }
-
-    .container .content .card .box-players {
-        grid-template-columns: repeat(4, 120px);
-    }
-     
 }

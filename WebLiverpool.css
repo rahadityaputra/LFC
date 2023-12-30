@@ -1,231 +1,224 @@
+/* fontstyle */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&family=Open+Sans:wght@300&display=swap');
+
 /* css untuk container */
 :root {
-  --color-satu : #c00310;
-  --bgcolor-white : #fff;
-  --color-white : #fff;
-  --color-white2: black;
+	--color-satu: #c00310;
+	--bgcolor-white: #fff;
+	--color-white: #fff;
+	--color-white2: black;
+  --font-primary : 'Montserrat', sans-serif;
 }
 
-html[data-mode="dark"]{
-  --bgcolor-white : black;
-  --color-white2: white;
+html[data-mode="dark"] {
+	--bgcolor-white: black;
+	--color-white2: white;
 }
 
-.container {
-    box-sizing: border-box;
-
+* {
+  box-sizing: border-box;
 }
 
 /* css untuk body  */
 
 body {
-  background-color: var(--bgcolor-white);
   color: var(--color-white2);
+}
+
+/* css untuk container */
+.container {
+  background-color: var(--bgcolor-white);
+
 }
 
 /* css untuk header */
 
-.container .header {
-    box-sizing: border-box;
-    grid-area: header;
-    color: var(--color-white);
-    display: flex;
-    flex-direction: column;
-
-    /* supaya header tidak bergerak / sticky */
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-}
-
-.container .header img {
-    width: 50px;
-}
-
-.container .header h1 {
-    font: 'Roboto';
-}
-
-
-.container .header .menuAndImage {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 1;
-  background-color: var(--color-satu);
+.header {
+  font-family: var(--font-primary);
   padding: 10px;
+	grid-area: header;
+	color: var(--color-white);
+	display: flex;
+	flex-direction: column;
+  background-color: var(--color-satu); 
+	/* supaya header tidak bergerak / sticky */
+	position: sticky;
+	top: 0;
 }
 
+.header img {
+	width: 50px;
+}
 
+.menuAndImage {
+  display: flex;
+	justify-content: space-between;
+	align-items: center;
+  position: relative;
+	z-index: 999999;
+}
 
 /* css untuk navigasi */
 
-.container .header .navigasi {
-    background-color: var(--color-satu);
-    padding: 50px 20px;
-    transform: translateY(-500px);
-    position: absolute;
-    right: 0;
-    left: 0;
-    z-index: -1;
-    transition:  1s;
-    display: flex;
-    justify-content: center;
-    text-align: center ;
+.navigasi {
+  background-color: var(--color-satu);
+  font-family: var(--font-primary);
+	padding: 50px 20px;
+	transform: translateY(-500px);
+	position: absolute;
+	right: 0;
+	left: 0;
+  height: 400px;
+	transition: 1s;
+	display: flex;
+	justify-content: center;
 }
 
-.container .header .navigasi ul li {
-    margin: 20px;
+.navigasi ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.container .header .navigasi a {
-    text-decoration: none;
-    font: 2em 'BebasNeue';
-    color: var(--color-white);
-    transition: .7s;
+.navigasi a {
+	text-decoration: none;
+	color: var(--color-white);
 }
 
-.container .header .navigasi a:hover {
-    color: #aaa;
+.navigasi a:hover {
+	color: #aaa;
 }
-
-/* css untuk checkbox */
 
 .container .header .menu input {
-  position: absolute;
-  right: 40px;
-  opacity: 0;
-  width: 28px;
-  height: 50px;
-  z-index: 9;
+	position: absolute;
+	right: 40px;
+	opacity: 0;
+	width: 28px;
+	height: 50px;
+	z-index: 9;
 }
 
 .container .header .menu span {
-  transform-origin: 0 0;
-  transition: .7s;
+	transform-origin: 0 0;
+	transition: 0.7s;
 }
 
 .container .header .menu input:checked ~ span:nth-child(2) {
-  transform: rotate(45deg) translate(1px ,-1px);
+	transform: rotate(45deg) translate(1px, -1px);
 }
 
 .container .header .menu input:checked ~ span:nth-child(4) {
-  transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
-.container .header .menu input:checked~span:nth-child(3) {
-  transform: scale(0);
+.container .header .menu input:checked ~ span:nth-child(3) {
+	transform: scale(0);
 }
-
 
 /* css untuk menu*/
+
 .container .header .menu {
-  height: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+	height: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
 .container .header .menu span {
-  width: 28px;
-  height: 3px;
-  display: block;
-  background-color: var(--color-white);
+	width: 28px;
+	height: 3px;
+	display: block;
+	background-color: var(--color-white);
 }
 
 .aniNav {
-  transform: translateY(30px) !important;
+	transform: translateY(30px);
 }
 
 /* css untuk main */
 
-
 .container main .content {
-    padding: 10px;
-    box-sizing: border-box;
-    grid-area: konten;
+	padding: 10px;
+	box-sizing: border-box;
+	grid-area: konten;
+  font-family: var(--font-primary);
 }
 
 .container main .content .card h2 {
-    font: 40px 'Roboto';
-    background-color: var(--color-satu);
-    padding: 10px;
-    color: var(--color-white);
+	background-color: var(--color-satu);
+	padding: 10px;
+	color: var(--color-white);
 }
 
 .container main .card p {
-    font: 15px/30px 'Roboto';
-    margin: 10px;
-    text-align: justify;
+	margin: 10px;
+	text-align: justify;
 }
 
 /* css untuk box-players */
 
 .container .content .card .box-players {
-    display: grid;
-    grid-template-columns: repeat(2, 120px);
-    justify-content: space-evenly;
+	display: grid;
+	grid-template-columns: repeat(2, 120px);
+	justify-content: space-evenly;
 }
 
 .container .content .card .box-players .box {
-    margin: 10px 0;
-    padding: 10px;
-    box-sizing: border-box;
-    /* untuk ukuran box */
+	margin: 10px 0;
+	padding: 10px;
+	box-sizing: border-box;
+	/* untuk ukuran box */
 
-    /* untuk bentuk box */
-    border: 1px solid var(--color-white);
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.4);
-    background-color: rgb(219, 201, 201);
-    overflow: hidden;
-    /* untuk animasi box */
-    transition: .4s;
+	/* untuk bentuk box */
+	border: 1px solid var(--color-white);
+	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.4);
+	background-color: rgb(219, 201, 201);
+	overflow: hidden;
+	/* untuk animasi box */
+	transition: 0.4s;
 }
 
 .container .content .card .box-players .box img {
-    width: 100%;
+	width: 100%;
 }
 
 /* animasi box ketika diklik */
 .container .content .card .box-players .box:hover {
-    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
-    transform: scale(1.2);
+	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+	transform: scale(1.2);
 }
 
 /* css untuk footer */
 
 .container footer {
-    background-color: #542928;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 30px;
-    color: var(--color-white);
-    grid-area: footer;
-    font: 1em 'Roboto';
+	background-color: #542928;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 30px;
+	color: var(--color-white);
+	grid-area: footer;
+	font: 1em "Roboto";
 }
 
 .container footer a img {
-    width: 50px;
+	width: 50px;
 }
-
-
 
 /* css untuk slider mode terang dan mode gelap */
-.container main .button {
-  margin-top: 20px;
-  margin-left: 100px;
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-  background-color: var(--color-white2);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.button {
+	display: flex;
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 60px;
+	height: 30px;
+  padding: 10px;
+	background-color: rgb(46, 173, 73);
 }
 
-.container main .button span {
-  /* text-align: center;
-  line-height: 50px; */
-  color: var(--bgcolor-white);
+.button span {
+  font-family: var(--font-primary);
+  margin: auto;
+	color: var(--bgcolor-white);
 }
