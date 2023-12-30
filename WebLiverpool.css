@@ -1,5 +1,5 @@
 /* fontstyle */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&family=Open+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&family=Open+Sans:wght@300&display=swap");
 
 /* css untuk container */
 :root {
@@ -7,7 +7,7 @@
 	--bgcolor-white: #fff;
 	--color-white: #fff;
 	--color-white2: black;
-  --font-primary : 'Montserrat', sans-serif;
+	--font-primary: "Montserrat", sans-serif;
 }
 
 html[data-mode="dark"] {
@@ -16,31 +16,31 @@ html[data-mode="dark"] {
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* css untuk body  */
 
 body {
-  color: var(--color-white2);
+	color: var(--color-white2);
 }
 
 /* css untuk container */
 .container {
-  background-color: var(--bgcolor-white);
-
+	background-color: var(--bgcolor-white);
 }
 
 /* css untuk header */
 
 .header {
-  font-family: var(--font-primary);
-  padding: 10px;
+	font-family: var(--font-primary);
+	padding: 10px;
 	grid-area: header;
 	color: var(--color-white);
 	display: flex;
 	flex-direction: column;
-  background-color: var(--color-satu); 
+	background-color: var(--color-satu);
+	
 	/* supaya header tidak bergerak / sticky */
 	position: sticky;
 	top: 0;
@@ -51,34 +51,34 @@ body {
 }
 
 .menuAndImage {
-  display: flex;
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
-  position: relative;
+	position: relative;
 	z-index: 999999;
 }
 
 /* css untuk navigasi */
 
 .navigasi {
-  background-color: var(--color-satu);
-  font-family: var(--font-primary);
+	background-color: var(--color-satu);
+	font-family: var(--font-primary);
 	padding: 50px 20px;
 	transform: translateY(-500px);
 	position: absolute;
 	right: 0;
 	left: 0;
-  height: 400px;
+	height: 400px;
 	transition: 1s;
 	display: flex;
 	justify-content: center;
 }
 
 .navigasi ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .navigasi a {
@@ -90,7 +90,7 @@ body {
 	color: #aaa;
 }
 
-.container .header .menu input {
+.menu input {
 	position: absolute;
 	right: 40px;
 	opacity: 0;
@@ -99,20 +99,20 @@ body {
 	z-index: 9;
 }
 
-.container .header .menu span {
+.menu span {
 	transform-origin: 0 0;
 	transition: 0.7s;
 }
 
-.container .header .menu input:checked ~ span:nth-child(2) {
+.menu input:checked ~ span:nth-child(2) {
 	transform: rotate(45deg) translate(1px, -1px);
 }
 
-.container .header .menu input:checked ~ span:nth-child(4) {
+.menu input:checked ~ span:nth-child(4) {
 	transform: rotate(-45deg);
 }
 
-.container .header .menu input:checked ~ span:nth-child(3) {
+.menu input:checked ~ span:nth-child(3) {
 	transform: scale(0);
 }
 
@@ -138,39 +138,38 @@ body {
 
 /* css untuk main */
 
-.container main .content {
+.content {
 	padding: 10px;
 	box-sizing: border-box;
 	grid-area: konten;
-  font-family: var(--font-primary);
+	font-family: var(--font-primary);
 }
 
-.container main .content .card h2 {
+.content .card h2 {
 	background-color: var(--color-satu);
 	padding: 10px;
 	color: var(--color-white);
 }
 
-.container main .card p {
+.card p {
+	text-align: 10px;
 	margin: 10px;
 	text-align: justify;
 }
 
 /* css untuk box-players */
 
-.container .content .card .box-players {
+.card .box-players {
+	margin-top: 10px;
 	display: grid;
-	grid-template-columns: repeat(2, 120px);
+	grid-template-columns: repeat(auto-fit, 100px);
 	justify-content: space-evenly;
+	gap: 10px;
 }
 
-.container .content .card .box-players .box {
-	margin: 10px 0;
+.box-players .box {
 	padding: 10px;
 	box-sizing: border-box;
-	/* untuk ukuran box */
-
-	/* untuk bentuk box */
 	border: 1px solid var(--color-white);
 	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.4);
 	background-color: rgb(219, 201, 201);
@@ -179,12 +178,12 @@ body {
 	transition: 0.4s;
 }
 
-.container .content .card .box-players .box img {
+.box-players .box img {
 	width: 100%;
 }
 
 /* animasi box ketika diklik */
-.container .content .card .box-players .box:hover {
+.box-players .box:hover {
 	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
 	transform: scale(1.2);
 }
@@ -198,7 +197,7 @@ body {
 	padding: 30px;
 	color: var(--color-white);
 	grid-area: footer;
-	font: 1em "Roboto";
+	font-family: var(--font-primary);
 }
 
 .container footer a img {
@@ -208,17 +207,23 @@ body {
 /* css untuk slider mode terang dan mode gelap */
 
 .button {
+	margin: 10px auto;
 	display: flex;
-	margin-top: 20px;
-	margin-left: 20px;
 	width: 60px;
 	height: 30px;
-  padding: 10px;
 	background-color: rgb(46, 173, 73);
+	cursor: pointer;
 }
 
 .button span {
-  font-family: var(--font-primary);
-  margin: auto;
+	margin: auto;
+	font-family: var(--font-primary);
 	color: var(--bgcolor-white);
+}
+
+/* icon svg */
+
+.icon {
+	width: 30px;
+	fill: white;
 }

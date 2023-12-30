@@ -73,5 +73,12 @@ main .card p {
 .container .content .card .box-players {
     grid-template-columns: repeat(4, 120px);
 }
+
+/* css untuk judul section */
+
+.card h2 {
+	position: sticky;
+	top: 0;
+}
     
 }

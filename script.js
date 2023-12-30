@@ -18,9 +18,9 @@ let span = document.querySelector('.container main .button span');
 mode.addEventListener('click', function () {
   if(document.querySelector('html').dataset.mode === 'light'){
     document.querySelector('html').dataset.mode = 'dark';
-    span.textContent = 'light';
+    span.textContent = 'Light';
   } else{
     document.querySelector('html').dataset.mode = 'light';
-      span.textContent = 'dark';
+      span.textContent = 'Dark';
   }
 });
